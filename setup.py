@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
-Enhanced RVC Setup Script
-Automates the installation and setup process for Enhanced RVC
+RVC+ Setup Script
+Automates the installation and setup process for RVC+
 """
 
 import os
@@ -13,7 +13,7 @@ import urllib.request
 import json
 from pathlib import Path
 
-class RVCSetup:
+class RVCPlusSetup:
     def __init__(self):
         self.system = platform.system()
         self.python_version = sys.version_info
@@ -241,7 +241,7 @@ class RVCSetup:
         
         # Gradio launcher
         gradio_script = '''#!/usr/bin/env python3
-"""Enhanced RVC Gradio Launcher"""
+"""RVC+ Gradio Launcher"""
 import sys
 import os
 
@@ -251,7 +251,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 try:
     from gradio_demo import create_enhanced_gradio_interface
     
-    print("🎵 Starting Enhanced RVC Gradio Interface...")
+    print("🎵 Starting RVC+ Gradio Interface...")
     demo = create_enhanced_gradio_interface()
     demo.launch(
         server_name="0.0.0.0",
@@ -261,7 +261,7 @@ try:
         show_error=True,
         show_tips=True,
         height=800,
-        title="Enhanced RVC - PolUVR + YTDLP + Custom Kernels"
+        title="RVC+ - PolUVR + YTDLP + Custom Kernels"
     )
 except ImportError as e:
     print(f"❌ Import error: {e}")
@@ -276,7 +276,7 @@ except Exception as e:
         
         # CLI launcher
         cli_script = '''#!/usr/bin/env python3
-"""Enhanced RVC CLI Launcher"""
+"""RVC+ CLI Launcher"""
 import sys
 import os
 
@@ -285,7 +285,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 if __name__ == "__main__":
     if len(sys.argv) < 2:
-        print("Enhanced RVC CLI")
+        print("RVC+ CLI")
         print("Usage: python3 rvc_cli.py <command> [args...]")
         print("")
         print("Commands:")
@@ -332,7 +332,7 @@ if __name__ == "__main__":
         
     elif command == "test":
         # Run basic tests
-        print("🧪 Running Enhanced RVC tests...")
+        print("🧪 Running RVC+ tests...")
         try:
             import torch
             import gradio
@@ -345,7 +345,7 @@ if __name__ == "__main__":
             else:
                 print("⚠️  CUDA not available, using CPU")
                 
-            print("🎵 Enhanced RVC ready for use!")
+            print("🎵 RVC+ ready for use!")
         except Exception as e:
             print(f"❌ Test failed: {e}")
     
@@ -434,7 +434,7 @@ if __name__ == "__main__":
         """Save setup log to file"""
         log_file = "setup_log.txt"
         with open(log_file, "w") as f:
-            f.write("Enhanced RVC Setup Log\n")
+            f.write("RVC+ Setup Log\n")
             f.write("="*50 + "\n")
             f.write(f"Date: {subprocess.check_output(['date'], text=True).strip()}\n")
             f.write(f"System: {self.system}\n")
@@ -445,7 +445,7 @@ if __name__ == "__main__":
         self.log(f"Setup log saved to {log_file} ✓")
 
 def main():
-    parser = argparse.ArgumentParser(description="Enhanced RVC Setup Script")
+    parser = argparse.ArgumentParser(description="RVC+ Setup Script")
     parser.add_argument("--skip-deps", action="store_true", help="Skip system dependencies installation")
     parser.add_argument("--pip-only", action="store_true", help="Use pip instead of uv")
     parser.add_argument("--no-models", action="store_true", help="Skip model downloads")
@@ -456,7 +456,7 @@ def main():
     
     setup = RVCSetup()
     
-    print("🎵 Enhanced RVC Setup Script")
+    print("🎵 RVC+ Setup Script")
     print("="*50)
     
     # Step 1: Check Python version

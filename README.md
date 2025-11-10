@@ -1,4 +1,4 @@
-# 🎵 Enhanced RVC - PolUVR + YTDLP + Custom Kernels
+# 🎵 RVC+
 
 **Advanced RVC (Retrieval-based Voice Conversion) fork with cutting-edge optimizations**
 

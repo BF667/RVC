@@ -1,4 +1,4 @@
-# 🎉 Enhanced RVC - Improvement Summary
+# 🎉 RVC+ - Enhancement Summary
 
 ## Overview
 This document summarizes all the enhancements made to the RVC (Retrieval-based Voice Conversion) fork to create a cutting-edge voice conversion system with PolUVR integration, YTDLP support, custom CUDA kernels, and modern Python compatibility.

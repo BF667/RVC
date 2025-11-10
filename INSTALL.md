@@ -82,4 +82,4 @@ brew install ffmpeg
 4. Join our [Discord community](https://discord.gg/rvc) for support
 
 ---
-*Enhanced RVC v2.0 - PolUVR + YTDLP + Custom Kernels*
+*RVC+ v2.0 - PolUVR + YTDLP + Custom Kernels*

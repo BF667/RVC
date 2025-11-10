@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Enhanced RVC Command Line Interface
+RVC+ Command Line Interface
 Simple and intuitive CLI for voice conversion
 """
 
@@ -105,7 +105,7 @@ def convert_audio(input_path, model_name, **kwargs):
 
 def test_system():
     """Test system compatibility"""
-    print("🧪 Testing Enhanced RVC System...")
+    print("🧪 Testing RVC+ System...")
     print("=" * 40)
     
     # Test Python version
@@ -172,7 +172,7 @@ def test_system():
 def show_help():
     """Show detailed help"""
     print("""
-🎵 Enhanced RVC - Command Line Interface
+🎵 RVC+ - Command Line Interface
 ========================================
 
 USAGE:
@@ -226,7 +226,7 @@ For more information, see README.md
 
 def main():
     parser = argparse.ArgumentParser(
-        description="Enhanced RVC Command Line Interface",
+        description="RVC+ Command Line Interface",
         formatter_class=argparse.RawDescriptionHelpFormatter
     )
     

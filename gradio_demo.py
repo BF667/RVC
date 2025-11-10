@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Enhanced RVC Gradio Demo with PolUVR + YTDLP Integration
+RVC+ Gradio Demo with PolUVR + YTDLP Integration
 Featuring: Custom CUDA Kernels, Advanced Audio Processing, Web Audio Source Support
 """
 
@@ -154,8 +154,8 @@ class AudioSourceManager:
             print(f"PolUVR processing failed: {e}")
             return audio_path
 
-class EnhancedRVCInference:
-    """Enhanced RVC inference with custom kernels and optimizations"""
+class RVCPlusInference:
+    """RVC+ inference with custom kernels and optimizations"""
     
     def __init__(self):
         self.hubert_model = None
@@ -271,7 +271,7 @@ class EnhancedRVCInference:
                 display_progress(0.3, "Processing with PolUVR...", True)
                 input_path = self.audio_source_manager.process_with_poluvr(input_path, poluvr_model)
             
-            # Enhanced RVC inference
+            # RVC+ inference
             display_progress(0.4, "Starting enhanced voice conversion...", True)
             
             # Use mixed precision if enabled
@@ -412,7 +412,7 @@ def create_enhanced_gradio_interface():
     """Create enhanced Gradio interface"""
     
     with gr.Blocks(
-        title="Enhanced RVC - PolUVR + YTDLP + Custom Kernels",
+        title="RVC+ - PolUVR + YTDLP + Custom Kernels",
         theme=gr.themes.Soft(),
         css="""
         .gradio-container {max-width: 1200px !important;}
@@ -423,7 +423,7 @@ def create_enhanced_gradio_interface():
     ) as demo:
         
         gr.Markdown("""
-        # 🎵 Enhanced RVC Voice Conversion
+        # 🎵 RVC+ Voice Conversion
         **Featuring:** PolUVR + YTDLP + Custom CUDA Kernels + Advanced Audio Processing
         
         ---
@@ -676,7 +676,7 @@ if __name__ == "__main__":
     share = False
     debug = False
     
-    print("🎵 Starting Enhanced RVC Demo...")
+    print("🎵 Starting RVC+ Demo...")
     print(f"📍 Server: http://{server_name}:{server_port}")
     print(f"🎛️ Features: PolUVR + YTDLP + Custom Kernels + {config.device}")
     
@@ -689,5 +689,5 @@ if __name__ == "__main__":
         show_error=True,
         show_tips=True,
         height=800,
-        title="Enhanced RVC Voice Conversion"
+        title="RVC+ Voice Conversion"
     )
