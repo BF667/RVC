@@ -415,10 +415,8 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 📞 Support
 
-- **Documentation**: [Wiki](https://github.com/BF667/RVC/wiki)
 - **Issues**: [GitHub Issues](https://github.com/BF667/RVC/issues)
 - **Discussions**: [GitHub Discussions](https://github.com/BF667/RVC/discussions)
-- **Discord**: [Community Server](https://discord.gg/rvc)
 
 ---
 
