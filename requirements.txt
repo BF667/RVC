@@ -1,33 +1,75 @@
 # Core dependencies
-requests
-numpy<2
-gradio
-einops
-mega-x
-gdown
-wget
-tqdm
+requests>=2.31.0
+numpy>=1.24.0,<3.0
+gradio>=4.15.0
+einops>=0.7.0
+gdown>=5.1.0
+wget>=3.2
+tqdm>=4.66.0
 
-# Audio processing
+# Enhanced audio processing
 ffmpeg-python>=0.2.0
-PolUVR[gpu]
-praat-parselmouth
-matplotlib==3.7.2
-#torchcrepe
-#torchfcpe
-edge-tts
+librosa>=0.10.0
+soundfile>=0.12.0
+pydub>=0.25.0
+yt-dlp>=2023.10.0
+PolUVR[gpu]>=3.0.0
+praat-parselmouth>=0.4.3
+matplotlib>=3.7.0
+scipy>=1.11.0
+edge-tts>=6.1.0
 
 # Machine learning and deep learning
-onnxruntime; sys_platform == 'darwin'
-onnxruntime-gpu; sys_platform != 'darwin'
-torch==2.6
-torchaudio==2.6
-torchvision==0.21
-faiss-cpu==1.7.3
-local-attention
-tensorboardX
+# Support multiple Python versions
+torch>=2.0.0; python_version < '3.12'
+torch>=2.2.0; python_version >= '3.12'
+torchvision>=0.15.0; python_version < '3.12'
+torchvision>=0.17.0; python_version >= '3.12'
+torchaudio>=2.0.0
 
-# Fairseq
-fairseq; python_version < '3.11'
+# ONNX Runtime with cross-platform support
+onnxruntime>=1.16.0; sys_platform == 'darwin'
+onnxruntime-gpu>=1.16.0; sys_platform == 'linux' and python_version < '3.12'
+onnxruntime-cuda>=1.17.0; sys_platform == 'linux' and python_version >= '3.12'
+onnxruntime-gpu>=1.17.0; sys_platform == 'win32' and python_version < '3.12'
+onnxruntime-cuda>=1.18.0; sys_platform == 'win32' and python_version >= '3.12'
+
+# Vector search and attention mechanisms
+faiss-cpu>=1.7.3
+local-attention>=0.1.0
+flash-attn>=2.5.0; sys_platform == 'linux'  # Custom kernel support
+xformers>=0.0.24; sys_platform == 'linux'  # Memory efficient attention
+
+# Audio analysis and processing
+audioread>=3.0.0
+resampy>=0.4.0
+numba>=0.58.0
+tensorboardX>=2.15.0
+
+# Custom kernel support (optional)
+cupy>=12.2.0; sys_platform == 'linux' and python_version < '3.12'
+cupy-cuda12x>=12.2.0; sys_platform == 'linux' and python_version >= '3.12'
+# Note: CuPy on Windows requires manual installation
+
+# Fairseq with enhanced compatibility
+fairseq>=0.12.0; python_version < '3.11'
 https://github.com/Bebra777228/TrainVocModel-EN/releases/download/fixed-packages/fairseq-0.12.3-cp311-cp311-linux_x86_64.whl; sys_platform == 'linux' and python_version == '3.11'
 https://github.com/Bebra777228/TrainVocModel-EN/releases/download/fixed-packages/fairseq-0.12.3-cp311-cp311-win_amd64.whl; sys_platform == 'win32' and python_version == '3.11'
+https://github.com/facebookresearch/fairseq/releases/download/v0.12.2/fairseq-0.12.2-py3-none-any.whl; python_version >= '3.12'
+
+# Development and utilities
+ipython>=8.0.0
+ipywidgets>=8.0.0
+jupyter>=1.0.0
+nbformat>=5.9.0
+psutil>=5.9.0
+psutil>=5.9.0
+
+# Optional: Enhanced audio quality
+demucs>=4.0.0
+spleeter>=2.3.0
+
+# Optional: Web interface enhancements
+fastapi>=0.104.0
+uvicorn>=0.24.0
+python-multipart>=0.0.6
