@@ -21,3 +21,5 @@ ipywidgets
 IPython
 beautifulsoup4
 pycryptodome>=3.9.6,<4.0.0
+tkinter-embed
+customtkinter
